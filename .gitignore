@@ -1,0 +1,13 @@
+# 聊天记录等非项目文件
+*.txt
+
+# 学习记录（本地私有，不提交）
+.claude/learned/.pending-retro.md
+.claude/learned/.warnings/
+
+# npm
+node_modules/
+
+# 系统
+.DS_Store
+Thumbs.db

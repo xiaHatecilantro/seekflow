@@ -1,4 +1,8 @@
-# 项目配置
+# SeekFlow
+
+> **寻流而上，自我进化。**
+> 专为 DeepSeek 打造的软件开发工作流系统。
+> 取 ECC 之广博、Superpowers 之纪律，加一套独门负反馈机制——同样的错，绝不犯第二次。
 
 ## 模型策略
 - **默认模型**：DeepSeek v4 Pro（复杂任务）和 DeepSeek v4 Flash（简单任务）
@@ -24,7 +28,7 @@
 5. **确认完成** — 总结改动内容
 
 ## 子代理使用
-遇到以下场景，委托子代理处理（详见 .claude/agents/）：
+遇到以下场景，委托子代理处理（详见 agents/）：
 - 复杂功能规划 → planner
 - 系统架构设计决策 → architect
 - 代码质量审查 → code-reviewer
@@ -62,7 +66,7 @@
 | Stop | AI 停止响应 | 检查危险操作警告 |
 | PreCompact | 上下文压缩前 | 保存关键状态，防止学习记录丢失 |
 
-所有 hook 脚本在 `.claude/hooks/` 下，纯 Node.js，跨平台。
+所有 hook 脚本在 `hooks/` 下，纯 Node.js，跨平台。
 
 ## DeepSeek 使用技巧
 - 充分利用 1M 上下文：一次性读取整个模块而非逐文件加载

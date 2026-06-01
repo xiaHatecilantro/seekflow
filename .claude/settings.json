@@ -3,7 +3,7 @@
     "SessionStart": [
       {
         "type": "command",
-        "command": "node .claude/hooks/session-start.js",
+        "command": "node hooks/session-start.js",
         "timeout": 15000
       }
     ],
@@ -11,7 +11,7 @@
       {
         "matcher": "tool == \"Edit\" || tool == \"Write\"",
         "type": "command",
-        "command": "node .claude/hooks/post-edit.js \"$tool_input.file_path\"",
+        "command": "node hooks/post-edit.js \"$tool_input.file_path\"",
         "timeout": 10000
       }
     ],
@@ -19,28 +19,28 @@
       {
         "matcher": "tool == \"Bash\" && (tool_input.command matches \"rm -rf|git push --force|git reset --hard|git clean -f|DROP TABLE|DELETE FROM\")",
         "type": "command",
-        "command": "node .claude/hooks/pre-bash-guard.js \"$tool_input.command\"",
+        "command": "node hooks/pre-bash-guard.js \"$tool_input.command\"",
         "timeout": 5000
       }
     ],
     "SessionEnd": [
       {
         "type": "command",
-        "command": "node .claude/hooks/session-end.js",
+        "command": "node hooks/session-end.js",
         "timeout": 15000
       }
     ],
     "Stop": [
       {
         "type": "command",
-        "command": "node .claude/hooks/stop-check.js",
+        "command": "node hooks/stop-check.js",
         "timeout": 10000
       }
     ],
     "PreCompact": [
       {
         "type": "command",
-        "command": "node .claude/hooks/pre-compact.js",
+        "command": "node hooks/pre-compact.js",
         "timeout": 10000
       }
     ]
