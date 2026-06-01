@@ -21,20 +21,20 @@
     "feedback-loop",
     "chinese"
   ],
-  "homepage": "https://github.com/xiachuan-can/seekflow#readme",
+  "homepage": "https://github.com/xiaHatecilantro/seekflow#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xiachuan-can/seekflow.git"
+    "url": "git+https://github.com/xiaHatecilantro/seekflow.git"
   },
   "bugs": {
-    "url": "https://github.com/xiachuan-can/seekflow/issues"
+    "url": "https://github.com/xiaHatecilantro/seekflow/issues"
   },
   "license": "MIT",
   "author": {
     "name": "Xia chuan can"
   },
   "bin": {
-    "seekflow": "./bin/seekflow.js"
+    "seekflow": "bin/seekflow.js"
   },
   "files": [
     "bin/",
@@ -52,6 +52,6 @@
     "node": ">=18"
   },
   "scripts": {
-    "postinstall": "echo '' && echo '  SeekFlow 已安装！' && echo '  运行: npx seekflow' && echo '  GitHub: https://github.com/xiachuan-can/seekflow' && echo ''"
+    "postinstall": "echo '' && echo '  SeekFlow 已安装！' && echo '  运行: npx seekflow' && echo '  GitHub: https://github.com/xiaHatecilantro/seekflow' && echo ''"
   }
 }

@@ -325,7 +325,7 @@ function doInstall(targets) {
     console.log(`  重启 Claude Code 即可使用 SeekFlow。`);
   }
   console.log(`  首次使用建议运行 /retro 查看系统全貌。`);
-  console.log(`  遇到问题？https://github.com/xiachuan-can/seekflow/issues\n`);
+  console.log(`  遇到问题？https://github.com/xiaHatecilantro/seekflow/issues\n`);
 }
 
 // ============================================================
