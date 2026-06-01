@@ -1,0 +1,54 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "type": "command",
+        "command": "node .claude/hooks/session-start.js",
+        "timeout": 15000,
+        "description": "加载已学规则和项目上下文"
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "tool == \"Edit\" || tool == \"Write\"",
+        "type": "command",
+        "command": "node .claude/hooks/post-edit.js \"$tool_input.file_path\"",
+        "timeout": 10000,
+        "description": "代码变更后提醒运行测试和更新文档"
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "tool == \"Bash\" && (tool_input.command matches \"rm -rf|git push --force|git reset --hard|git clean|DROP TABLE|DELETE FROM\")",
+        "type": "command",
+        "command": "node .claude/hooks/pre-bash-guard.js \"$tool_input.command\"",
+        "timeout": 5000,
+        "description": "危险操作拦截确认"
+      }
+    ],
+    "SessionEnd": [
+      {
+        "type": "command",
+        "command": "node .claude/hooks/session-end.js",
+        "timeout": 15000,
+        "description": "会话结束复盘，检查未保存的学习记录"
+      }
+    ],
+    "Stop": [
+      {
+        "type": "command",
+        "command": "node .claude/hooks/stop-check.js",
+        "timeout": 10000,
+        "description": "停止时检查是否有值得保存的反馈"
+      }
+    ],
+    "PreCompact": [
+      {
+        "type": "command",
+        "command": "node .claude/hooks/pre-compact.js",
+        "timeout": 10000,
+        "description": "上下文压缩前保存当前状态摘要"
+      }
+    ]
+  }
+}
