@@ -24,7 +24,8 @@
   <a href="#-安装--install"><strong>安装 / Install</strong></a> &nbsp;·&nbsp;
   <a href="#-包含什么--whats-inside"><strong>内容 / Contents</strong></a> &nbsp;·&nbsp;
   <a href="#-核心特色--highlight"><strong>特色 / Highlight</strong></a> &nbsp;·&nbsp;
-  <a href="#-对比--comparison"><strong>对比 / Comparison</strong></a>
+  <a href="#-对比--comparison"><strong>对比 / Comparison</strong></a> &nbsp;·&nbsp;
+  <a href="#-贡献--contributing"><strong>贡献 / Contributing</strong></a>
 </p>
 
 ---
@@ -209,6 +210,24 @@ ECC 和 Superpowers 都是"死"的工作流——装完什么样就是什么样�
 SeekFlow 的架构深受 [Everything Claude Code](https://github.com/affaan-m/ECC) 和 [Superpowers](https://github.com/obra/superpowers) 启发，在此向两个项目的作者致敬。
 
 > *SeekFlow's architecture is deeply inspired by ECC and Superpowers. Hats off to both authors.*
+
+---
+
+## 🤝 贡献 / Contributing
+
+欢迎 PR。无论是新的代理、技能、规范，还是对现有内容的优化——你的想法可以让 SeekFlow 变得更好。
+
+> *PRs welcome. New agents, skills, rules, or improvements to existing ones — your ideas make SeekFlow better.*
+
+**贡献方向 / Ideas：**
+- 新语言/框架专属技能 / New language/framework skills
+- 适配更多 AI 编程工具 / Support for more AI tools
+- 负反馈机制增强 / Negative-feedback improvements
+- 文档/翻译 / Documentation & translations
+
+Fork → Branch → PR，就这么简单。有问题开 Issue 聊。
+
+> *Fork → Branch → PR. Got questions? Open an issue.*
 
 ---
 
