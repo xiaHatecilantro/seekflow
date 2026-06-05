@@ -147,13 +147,22 @@ npx seekflow uninstall   # 卸载 / Remove
 | `Stop` | AI 暂停 | 检查警告 / Warn check |
 | `PreCompact` | 上下文压缩前 | 保护学习记录 / Protect learned state |
 
-### 3 个规范 / Rules
+### 规范体系 / Rules
 
-| 规范 Rule | 内容 Content |
-|:---|:---|
-| `coding-standards` | 命名、函数设计、注释、错误处理 / Naming, design, comments, errors |
-| `testing` | TDD 节奏、覆盖率、测试命名 / TDD rhythm, coverage, naming |
-| `deepseek-guide` | 模型特性、Prompt 技巧、上下文策略 / Model traits, prompts, context |
+**分级加载，绝不臃肿。** 领域规则嵌入代理和技能内部，按任务上下文按需加载。
+
+> *Tiered loading. Domain rules live inside agents & skills — loaded on demand, not at startup.*
+
+| 级别 Tier | 内容 Content | 加载时机 When |
+|:---|:---|:---|
+| 根级 / Root | `CLAUDE.md` + `rules/core.md` | 每次会话 / Every session |
+| 代理级 / Agent | 各 agent 内嵌原则 | 调用子代理时 / On agent invoke |
+| 技能级 / Skill | 各 SKILL.md 内嵌方法 | 触发技能时 / On skill trigger |
+| 学习级 / Learned | 带标签的学习规则 | 匹配上下文时 / Context-matched |
+
+启动体积 ~60 行，不会随学习规则增长而臃肿。
+
+> *Startup footprint ~60 lines. Won't bloat as learned rules grow.*
 
 ---
 
@@ -176,9 +185,13 @@ ECC 和 Superpowers 都是"死"的工作流——装完什么样就是什么样�
           → 写入永久生效 / Write → permanent
 ```
 
-所有学习记录跨会话持久化，**用得越久，越懂你**。这个能力 ECC 和 Superpowers 都没有。
+学习规则通过标签系统分级管理——`general` 标签的规则每次启动加载，领域标签（`python`、`git` 等）只在相关任务时读取。规则再多也不会拖慢启动。
 
-> *All learnings persist across sessions. The longer you use it, the better it knows you. Neither ECC nor Superpowers has this.*
+> *Learned rules are tagged and tiered — `general` loads at startup, domain tags load on demand. No startup bloat.*
+
+ECC 和 Superpowers 都没有这个能力。
+
+> *Neither ECC nor Superpowers has this capability.*
 
 ---
 
@@ -193,6 +206,7 @@ ECC 和 Superpowers 都是"死"的工作流——装完什么样就是什么样�
 | 负反馈 / Feedback | 无 None | 无 None | **有 Yes** |
 | 中文原生 / ZH-native | 翻译 Translation | 无 None | **是 Yes** |
 | 上下文 / Context | 200K 保守 | 200K 保守 | **1M 充分利用** |
+| 规则架构 / Rules | 扁平全加载 | 扁平全加载 | **分级按需加载** |
 | 安装 / Install | Claude Code 插件 | Claude Code 插件 | **npx 全平台通用** |
 
 ---
