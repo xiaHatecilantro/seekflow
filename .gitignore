@@ -2,8 +2,16 @@
 *.txt
 
 # 学习记录（本地私有，不提交）
+.claude/learned/feedback/*
+.claude/learned/patterns/*
+.claude/learned/preferences/*
 .claude/learned/.pending-retro.md
 .claude/learned/.warnings/
+
+# 保留目录结构
+!.claude/learned/feedback/.gitkeep
+!.claude/learned/patterns/.gitkeep
+!.claude/learned/preferences/.gitkeep
 
 # npm
 node_modules/

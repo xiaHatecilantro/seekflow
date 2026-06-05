@@ -4,6 +4,20 @@
 > 专为 DeepSeek 打造的软件开发工作流系统。
 > 取 ECC 之广博、Superpowers 之纪律，加一套独门负反馈机制——同样的错，绝不犯第二次。
 
+## 规则分级加载
+
+系统规则分四级按需加载，避免启动臃肿：
+
+| 级别 | 内容 | 加载时机 | 体积 |
+|------|------|---------|------|
+| 根级 | CLAUDE.md + rules/core.md | 每次会话 | ~60 行 |
+| 代理级 | 各 agent.md 内嵌原则 | 调用子代理时 | 按需 1 个 |
+| 技能级 | 各 SKILL.md 内嵌方法 | 触发技能时 | 按需 1 个 |
+| 学习级 | learned/ 带标签规则 | 匹配任务上下文时 | 按需几条 |
+
+学习规则必须带标签（`general`/`network`/`python`/`typescript`/`git`/`shell` 等），
+SessionStart Hook 只加载 `general` 标签，其余由 AI 根据当前任务按需读取。
+
 ## 模型策略
 - **默认模型**：DeepSeek v4 Pro（复杂任务）和 DeepSeek v4 Flash（简单任务）
 - **上下文窗口**：1M tokens，充分利用，预加载相关内容而非频繁压缩
@@ -59,7 +73,7 @@
 
 | Hook | 触发时机 | 作用 |
 |------|---------|------|
-| SessionStart | 会话开始 | 加载 LEARNED.md，显示已学规则，检查未处理复盘 |
+| SessionStart | 会话开始 | 智能分级加载 LEARNED.md（仅 gen-eral 标签），检查未处理复盘 |
 | PostToolUse | 编辑/写入文件后 | 提醒运行测试、同步文档 |
 | PreToolUse | 执行危险命令前 | 拦截 rm -rf、force push、DROP TABLE 等 |
 | SessionEnd | 会话结束 | 统计学习记录，提醒未保存的反馈 |

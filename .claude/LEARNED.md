@@ -1,25 +1,26 @@
 # 已学习规则索引
 
-这个文件自动维护，记录所有从用户反馈中学到的规则。
-每次新会话开始时自动加载。
+分级管理，按需加载。标签决定规则何时生效。
 
-## 纠正性规则 (feedback/)
-<!-- 自动生成，格式：- [规则简述](learned/feedback/xxx.md) — 触发原因 -->
+## 加载策略
+
+| 标签 | 加载时机 | 示例 |
+|------|---------|------|
+| `general` | 每次会话 | 交流风格、行为准则 |
+| `network` | 发起网络请求时 | 代理配置 |
+| `python` | 处理 Python 代码时 | 包管理偏好 |
+| `typescript` | 处理 TypeScript 时 | 类型规范 |
+| `git` | git 操作时 | commit 格式 |
+| `shell` | 执行命令时 | 包管理器选择 |
+
+## 纠正性规则 (learned/feedback/)
 
 （暂无。当你在对话中纠正我时，我会提议写入规则。）
 
-## 已验证模式 (patterns/)
-<!-- 自动生成，格式：- [模式名](learned/patterns/xxx.md) — 适用场景 -->
+## 已验证模式 (learned/patterns/)
 
 （暂无。当某个做法被验证有效 2 次以上时记录。）
 
-## 个人偏好 (preferences/)
-<!-- 自动生成，格式：- [偏好名](learned/preferences/xxx.md) — 类别 -->
+## 个人偏好 (learned/preferences/)
 
-- [全局交流用中文](learned/preferences/communication.md) — 交流风格
-- [代理端口 7897](learned/preferences/proxy.md) — 开发环境
-
-## 项目技能 (skills/)
-<!-- 项目内除核心 8 技能外，额外载入的专属技能 -->
-
-- [MCP 服务器管理](skills/mcp-manager/SKILL.md) — 添加/删除/排查 MCP 配置，含 Windows 特殊格式
+（本地私有，不提交到 Git。）
