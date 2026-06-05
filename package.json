@@ -46,6 +46,7 @@
     ".claude-plugin/",
     "marketplace.json",
     "README.md",
+    "README.zh-CN.md",
     "LICENSE"
   ],
   "engines": {
