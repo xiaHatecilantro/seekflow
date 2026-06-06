@@ -9,7 +9,7 @@
 ---
 
 <p align="center">
-  <img alt="SeekFlow" src="https://via.placeholder.com/600x120/1a1a2e/eee?text=SeekFlow" width="600">
+  <img alt="SeekFlow" src="logo.png" width="200">
 </p>
 
 <p align="center">

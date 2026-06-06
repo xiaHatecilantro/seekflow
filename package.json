@@ -47,6 +47,7 @@
     "marketplace.json",
     "README.md",
     "README.en.md",
+    "logo.png",
     "LICENSE"
   ],
   "engines": {
