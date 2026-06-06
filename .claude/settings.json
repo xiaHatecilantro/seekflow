@@ -35,6 +35,40 @@
         "type": "command",
         "command": "node hooks/stop-check.js",
         "timeout": 10000
+      },
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -ExecutionPolicy Bypass -File hooks/bring-to-front.ps1",
+            "timeout": 5000
+          }
+        ]
+      }
+    ],
+    "Elicitation": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -ExecutionPolicy Bypass -File hooks/bring-to-front.ps1",
+            "timeout": 5000
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -ExecutionPolicy Bypass -File hooks/bring-to-front.ps1",
+            "timeout": 5000
+          }
+        ]
       }
     ],
     "PreCompact": [

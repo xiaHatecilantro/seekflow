@@ -98,7 +98,7 @@ npx seekflow uninstall   # 卸载
 | `deepseek-context` | 1M 上下文优化策略 |
 | `mcp-manager` | MCP 服务器管理 |
 
-### 6 个 Hook
+### 6 个 Hook + 任务栏提醒
 
 | Hook | 触发点 | 作用 |
 |:---|:---|:---|
@@ -106,8 +106,10 @@ npx seekflow uninstall   # 卸载
 | `PostToolUse` | 编辑文件后 | 提醒测试、文档同步 |
 | `PreToolUse` | 危险命令前 | 拦截 rm -rf / force push / DROP TABLE |
 | `SessionEnd` | 会话结束 | 统计学习、提醒复盘 |
-| `Stop` | AI 暂停 | 检查警告 |
 | `PreCompact` | 上下文压缩前 | 保护学习记录 |
+| `Stop` | AI 暂停 | 任务栏闪烁 + 检查警告 |
+| `Elicitation` | AI 提问 | 任务栏闪烁提醒 |
+| `PermissionRequest` | 权限确认 | 任务栏闪烁提醒 |
 
 ### 规范体系 — 分级加载
 

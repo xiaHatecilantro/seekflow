@@ -40,6 +40,31 @@
         "command": "node .claude/hooks/stop-check.js",
         "timeout": 10000,
         "description": "停止时检查是否有值得保存的反馈"
+      },
+      {
+        "type": "command",
+        "command": "powershell -ExecutionPolicy Bypass -File hooks/bring-to-front.ps1",
+        "timeout": 5000,
+        "description": "任务栏闪烁提醒用户切回窗口",
+        "shell": "powershell"
+      }
+    ],
+    "Elicitation": [
+      {
+        "type": "command",
+        "command": "powershell -ExecutionPolicy Bypass -File hooks/bring-to-front.ps1",
+        "timeout": 5000,
+        "description": "AI 提问时闪烁任务栏",
+        "shell": "powershell"
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "type": "command",
+        "command": "powershell -ExecutionPolicy Bypass -File hooks/bring-to-front.ps1",
+        "timeout": 5000,
+        "description": "权限确认时闪烁任务栏",
+        "shell": "powershell"
       }
     ],
     "PreCompact": [

@@ -106,7 +106,9 @@ npx seekflow uninstall   # Remove
 | `PostToolUse` | After file edit | Remind tests & docs |
 | `PreToolUse` | Before dangerous command | Block rm -rf / force push / DROP TABLE |
 | `SessionEnd` | Session ends | Stats & retro reminder |
-| `Stop` | AI pauses | Warn check |
+| `Stop` | AI pauses | Taskbar flash + warn check |
+| `Elicitation` | AI asks question | Taskbar flash |
+| `PermissionRequest` | Permission prompt | Taskbar flash |
 | `PreCompact` | Before context compaction | Protect learned state |
 
 ### Rules — Tiered Loading
