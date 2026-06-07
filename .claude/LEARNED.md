@@ -19,7 +19,7 @@
 
 ## 已验证模式 (learned/patterns/)
 
-（暂无。当某个做法被验证有效 2 次以上时记录。）
+- [项目开发文档工作流](learned/patterns/project-spec-workflow.md) — 前期讨论后创建 PROJECT-SPEC.md 约束开发方向 `[general]`
 
 ## 个人偏好 (learned/preferences/)
 

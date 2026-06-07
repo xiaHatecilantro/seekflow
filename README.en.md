@@ -126,6 +126,10 @@ npx seekflow uninstall   # Remove
 
 Startup footprint: ~60 lines. Won't bloat as learned rules grow.
 
+### Decision Log
+
+Every important decision (direction, architecture, method) is saved to `.claude/memory/MEMORY.md` and loaded on session start. After architecture discussions, `.claude/memory/PROJECT-SPEC.md` locks in the technical roadmap.
+
 ---
 
 ## Highlight: Negative-Feedback Loop

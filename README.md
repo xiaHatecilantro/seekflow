@@ -126,6 +126,10 @@ npx seekflow uninstall   # 卸载
 
 启动体积约 60 行，不会随学习规则增长而臃肿。
 
+### 决策记录 / Decision Log
+
+每次重要决策（方向、架构、方法）自动写入 `.claude/memory/MEMORY.md`，SessionStart 时加载。前期讨论完成后生成 `.claude/memory/PROJECT-SPEC.md` 锁定技术路线。
+
 ---
 
 ## 核心特色：负反馈机制
