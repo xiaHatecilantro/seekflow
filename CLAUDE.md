@@ -45,6 +45,8 @@ SessionStart Hook 只加载 `general` 标签，其余由 AI 根据当前任务�
 遇到以下场景，委托子代理处理（详见 agents/）：
 - 复杂功能规划 → planner
 - 系统架构设计决策 → architect
+- 前端架构设计 → frontend-engineer
+- 后端架构设计 → backend-engineer
 - 代码质量审查 → code-reviewer
 - 故障排查调试 → debugger
 - TDD 实现 → tdd-executor

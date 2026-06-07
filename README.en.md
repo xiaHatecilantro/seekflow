@@ -72,12 +72,14 @@ npx seekflow uninstall   # Remove
 
 ## What's Inside
 
-### 7 Agents
+### 9 Agents
 
 | Agent | Role | Model |
 |:---|:---|:---:|
 | `planner` | Feature planning | Pro |
 | `architect` | Architecture decisions | Pro |
+| `frontend-engineer` | Frontend architecture, routing, state, ports | Pro |
+| `backend-engineer` | API design, database, services, middleware | Pro |
 | `code-reviewer` | Code & security review | Pro |
 | `debugger` | Systematic debugging | Pro |
 | `tdd-executor` | RED → GREEN → REFACTOR | Pro |
@@ -151,7 +153,7 @@ Neither ECC nor Superpowers has this capability.
 | | ECC | Superpowers | **SeekFlow** |
 |:---|:---|:---|:---|
 | Position | Arsenal | Discipline | **Self-evolving workflow** |
-| Agents | 36+ | ~5 | 7 |
+| Agents | 36+ | ~5 | 9 |
 | Skills | 249 | 14 | 9 |
 | Model optimized | Claude | Claude | **DeepSeek** |
 | Negative-feedback | No | No | **Yes** |

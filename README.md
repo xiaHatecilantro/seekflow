@@ -72,12 +72,14 @@ npx seekflow uninstall   # 卸载
 
 ## 包含什么
 
-### 7 个代理
+### 9 个代理
 
 | 代理 | 职责 | 模型 |
 |:---|:---|:---:|
 | `planner` | 功能实现规划 | Pro |
 | `architect` | 系统架构设计决策 | Pro |
+| `frontend-engineer` | 前端架构、路由、状态管理、端口 | Pro |
+| `backend-engineer` | API 设计、数据库、服务分层、中间件 | Pro |
 | `code-reviewer` | 代码质量与安全审查 | Pro |
 | `debugger` | 系统故障排查 | Pro |
 | `tdd-executor` | TDD 严格循环 | Pro |
@@ -151,7 +153,7 @@ ECC 和 Superpowers 都没有这个能力。
 | | ECC | Superpowers | **SeekFlow** |
 |:---|:---|:---|:---|
 | 定位 | 全家桶 | 纪律系统 | **自进化工作流** |
-| 代理 | 36+ | ~5 | 7 |
+| 代理 | 36+ | ~5 | 9 |
 | 技能 | 249 | 14 | 9 |
 | 模型优化 | Claude | Claude | **DeepSeek** |
 | 负反馈 | 无 | 无 | **有** |
