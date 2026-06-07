@@ -65,7 +65,20 @@ SessionStart Hook 只加载 `general` 标签，其余由 AI 根据当前任务�
 流程：检测信号 → 起草规则 → 询问确认 → 写入文件 → 更新 LEARNED.md
 
 所有已学规则存储在 `.claude/learned/` 中，通过 `.claude/LEARNED.md` 索引。
-每次新会话自动加载 LEARNED.md，确保历史教训永不丢失。
+每次新会话自动加载 LEARNED.md 和 MEMORY.md，确保历史教训永不丢失。
+
+## 决策记录
+
+每次做出重要决定后（方向、格式、方法、策略），在 `.claude/memory/MEMORY.md` 追加一条：
+
+```
+## [日期] [决定标题]
+决定了什么：（所做的选择）
+为什么：（理由）
+否决了什么：（排除的方案及理由）
+```
+
+SessionStart Hook 会自动加载并显示决策数量。
 
 ## Hooks（自动化触发器）
 
