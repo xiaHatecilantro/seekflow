@@ -168,11 +168,45 @@ ECC 和 Superpowers 都没有这个能力。
 
 ---
 
+## Provider Setup
+
+SeekFlow 本身不绑定任何模型服务商，也不会替你接管 API 请求。它安装的是 agents、skills、hooks 和 rules；实际模型调用由 Claude Code、Codex、Cursor、Gemini CLI 或 OpenCode 等宿主工具处理。
+
+你可以继续使用：
+
+- DeepSeek API
+- Anthropic API
+- OpenAI-compatible API
+- 其他宿主工具支持的 Provider
+
+### OrcaRouter（可选）
+
+[OrcaRouter](https://www.orcarouter.ai/) 是一个 OpenAI-compatible API Provider。SeekFlow 不把它设为默认 Provider，也不要求用户使用它；如果你的宿主工具支持自定义 OpenAI-compatible API，只需要按宿主工具的配置方式填写：
+
+```text
+Base URL: https://api.orcarouter.ai/v1
+API Key:  sk-orca-...
+Model:    deepseek/deepseek-chat
+```
+
+也可以使用 OrcaRouter 文档中列出的其他模型 ID，例如 `openai/gpt-4o-mini`、`deepseek/deepseek-v4-pro-free` 或 `orcarouter/auto`。具体可用模型以 OrcaRouter 的 [`/v1/models`](https://docs.orcarouter.ai/getting-started/models) 为准。
+
+OrcaRouter 官方文档：
+
+- [Quickstart](https://docs.orcarouter.ai/getting-started/quickstart)
+- [OpenAI SDK compatibility](https://docs.orcarouter.ai/compatibility/openai-sdk)
+- [Streaming](https://docs.orcarouter.ai/advanced/streaming)
+- [Tool calling](https://docs.orcarouter.ai/advanced/tool-calling)
+
+Referral / Affiliate Link：[https://www.orcarouter.ai/ref/ref_4bd11396704c5f0dc65d](https://www.orcarouter.ai/ref/ref_4bd11396704c5f0dc65d)。通过该链接注册可能会让 SeekFlow 从符合条件的付费推理消费中获得分成。
+
+---
+
 ## 系统要求
 
 - **Node.js** ≥ 18
 - 任一 AI 编程工具：Claude Code · Codex · Cursor · Gemini CLI · OpenCode
-- DeepSeek API（推荐）或 Anthropic API
+- DeepSeek API（推荐）、Anthropic API 或宿主工具支持的 OpenAI-compatible Provider
 
 ---
 

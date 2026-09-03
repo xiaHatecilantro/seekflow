@@ -168,11 +168,45 @@ Neither ECC nor Superpowers has this capability.
 
 ---
 
+## Provider Setup
+
+SeekFlow does not bind you to any model provider and does not take over API requests. It installs agents, skills, hooks, and rules; actual model calls are handled by the host tool, such as Claude Code, Codex, Cursor, Gemini CLI, or OpenCode.
+
+You can keep using:
+
+- DeepSeek API
+- Anthropic API
+- OpenAI-compatible API
+- Any other provider supported by your host tool
+
+### OrcaRouter (Optional)
+
+[OrcaRouter](https://www.orcarouter.ai/) is an OpenAI-compatible API provider. SeekFlow does not make it the default provider and does not require users to use it. If your host tool supports custom OpenAI-compatible APIs, configure it through that tool with:
+
+```text
+Base URL: https://api.orcarouter.ai/v1
+API Key:  sk-orca-...
+Model:    deepseek/deepseek-chat
+```
+
+You can also use other model IDs from OrcaRouter's docs, such as `openai/gpt-4o-mini`, `deepseek/deepseek-v4-pro-free`, or `orcarouter/auto`. The live catalog is available through OrcaRouter's [`/v1/models`](https://docs.orcarouter.ai/getting-started/models).
+
+OrcaRouter docs:
+
+- [Quickstart](https://docs.orcarouter.ai/getting-started/quickstart)
+- [OpenAI SDK compatibility](https://docs.orcarouter.ai/compatibility/openai-sdk)
+- [Streaming](https://docs.orcarouter.ai/advanced/streaming)
+- [Tool calling](https://docs.orcarouter.ai/advanced/tool-calling)
+
+Referral / Affiliate Link: [https://www.orcarouter.ai/ref/ref_4bd11396704c5f0dc65d](https://www.orcarouter.ai/ref/ref_4bd11396704c5f0dc65d). Signing up through that link may let SeekFlow earn a share of eligible paid inference spend.
+
+---
+
 ## Requirements
 
 - **Node.js** ≥ 18
 - Any AI coding tool: Claude Code · Codex · Cursor · Gemini CLI · OpenCode
-- DeepSeek API (recommended) or Anthropic API
+- DeepSeek API (recommended), Anthropic API, or any OpenAI-compatible provider supported by your host tool
 
 ---
 
